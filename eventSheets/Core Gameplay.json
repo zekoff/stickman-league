@@ -1,0 +1,119 @@
+{
+	"name": "Core Gameplay",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 454970087892579,
+					"parameters": {
+						"object": "Coin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Coin",
+					"sid": 898051562373782
+				}
+			],
+			"sid": 626455883908564
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Player",
+					"sid": 902952634263215,
+					"parameters": {
+						"object": "Criper"
+					}
+				},
+				{
+					"id": "is-flashing",
+					"objectClass": "Player",
+					"sid": 390458537627506,
+					"behaviorType": "Flash",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Player",
+					"sid": 894072929230370,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Player",
+					"sid": 857308503493817,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.3",
+						"off-time": "0.1",
+						"duration": "3"
+					}
+				}
+			],
+			"sid": 840691668337944
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Player",
+					"sid": 893701374378544,
+					"parameters": {
+						"instance-variable": "health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 598308371346333
+				}
+			],
+			"sid": 794464234650653
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 133282551757584
+				}
+			],
+			"actions": [
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 576174861734403,
+					"parameters": {
+						"folder": "music",
+						"audio-file-name": "choose(\"badder_song\", \"beater_song\")",
+						"loop": "looping",
+						"volume": "-12",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 756218748977884
+		}
+	],
+	"sid": 375814710823221
+}

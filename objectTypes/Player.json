@@ -1,0 +1,87 @@
+{
+	"name": "Player",
+	"plugin-id": "Sprite",
+	"sid": 948317334921656,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "health",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 201450850989015
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 329802347436332
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 200178490483151
+		},
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 981299364257061
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 604111266029499
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4692914,
+						"collisionPoly": {
+							"points": [
+								0.468,
+								0.04,
+								0.584,
+								0.068,
+								0.636,
+								0.132,
+								0.728,
+								0.456,
+								0.668,
+								0.992,
+								0.304,
+								0.976,
+								0.256,
+								0.44,
+								0.368,
+								0.104
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 486144685904676,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

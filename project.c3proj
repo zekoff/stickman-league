@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -17,13 +24,6 @@
 			"type": "behavior",
 			"id": "Flash",
 			"name": "Flash",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Pin",
-			"name": "Pin",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -68,9 +68,9 @@
 		"items": [
 			"Player",
 			"Obstacle",
-			"Camera",
 			"Coin",
-			"Criper"
+			"Criper",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -103,7 +103,24 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "beater_song.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 261859224786423,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "badder_song.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 355742375916261,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
