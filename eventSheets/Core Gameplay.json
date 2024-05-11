@@ -169,7 +169,58 @@
 					}
 				}
 			],
-			"sid": 924833277390700
+			"sid": 924833277390700,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 380482074647707,
+							"parameters": {
+								"instance-variable": "facing",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "Bullet",
+							"sid": 282799192616918,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 633155221844461
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 271488052633493
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "Bullet",
+							"sid": 216458623200475,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 752059188741173
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -243,6 +294,56 @@
 				}
 			],
 			"sid": 263435233582751
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 572009717728027,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 143415806825672,
+					"parameters": {
+						"instance-variable": "facing",
+						"value": "\"right\""
+					}
+				}
+			],
+			"sid": 591733195793716
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 528086791464010,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 624279557780897,
+					"parameters": {
+						"instance-variable": "facing",
+						"value": "\"left\""
+					}
+				}
+			],
+			"sid": 257189268406150
 		}
 	],
 	"sid": 375814710823221

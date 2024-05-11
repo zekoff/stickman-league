@@ -17,6 +17,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 753565948570244
+		},
+		{
+			"name": "facing",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 780028004919212
 		}
 	],
 	"behaviorTypes": [

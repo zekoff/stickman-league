@@ -18,7 +18,8 @@
 					"uid": 2,
 					"instanceVariables": {
 						"health": 4,
-						"bullet_ready": true
+						"bullet_ready": true,
+						"facing": "\"right\""
 					},
 					"behaviors": {
 						"BoundToLayout": {
@@ -95,6 +96,10 @@
 											},
 											{
 												"iv": "bullet_ready",
+												"state": true
+											},
+											{
+												"iv": "facing",
 												"state": true
 											}
 										]
