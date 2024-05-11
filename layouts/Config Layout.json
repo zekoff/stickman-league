@@ -17,7 +17,8 @@
 					},
 					"uid": 2,
 					"instanceVariables": {
-						"health": 4
+						"health": 4,
+						"bullet_ready": true
 					},
 					"behaviors": {
 						"BoundToLayout": {
@@ -45,6 +46,9 @@
 							}
 						},
 						"Flash": {
+							"properties": {}
+						},
+						"Timer": {
 							"properties": {}
 						}
 					},
@@ -87,6 +91,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "bullet_ready",
 												"state": true
 											}
 										]
@@ -161,6 +169,10 @@
 									},
 									{
 										"key": "Flash",
+										"state": []
+									},
+									{
+										"key": "Timer",
 										"state": []
 									}
 								]
@@ -894,10 +906,222 @@
 						"replicasUIDs": null
 					},
 					"world": {
-						"x": 371.88834423262676,
-						"y": 592.9916420428898,
-						"width": 126.98081483221257,
-						"height": 63.92442387305234,
+						"x": 387.6905492880672,
+						"y": 585.036528072109,
+						"width": 158.58522494309338,
+						"height": 79.83465181461392,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Bullet",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 24,
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"template": {
+						"mode": "template",
+						"templateName": "Standard",
+						"sourceTemplateName": "",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"initial-animation",
+												true
+											],
+											[
+												"initial-frame",
+												true
+											],
+											[
+												"enable-collisions",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": []
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": [
+									{
+										"key": "Bullet",
+										"state": [
+											[
+												"speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"bounce-off-solids",
+												true
+											],
+											[
+												"set-angle",
+												true
+											],
+											[
+												"step",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						],
+						"replicasUIDs": null
+					},
+					"world": {
+						"x": 322.96742086302214,
+						"y": 534.6032639464432,
+						"width": 67.88578324249568,
+						"height": 67.88578324249568,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

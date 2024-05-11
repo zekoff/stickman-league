@@ -1139,7 +1139,8 @@
 					},
 					"uid": 10,
 					"instanceVariables": {
-						"health": 4
+						"health": 4,
+						"bullet_ready": true
 					},
 					"behaviors": {
 						"BoundToLayout": {
@@ -1167,6 +1168,9 @@
 							}
 						},
 						"Flash": {
+							"properties": {}
+						},
+						"Timer": {
 							"properties": {}
 						}
 					},
@@ -1209,6 +1213,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "bullet_ready",
 												"state": true
 											}
 										]
@@ -1283,6 +1291,10 @@
 									},
 									{
 										"key": "Flash",
+										"state": []
+									},
+									{
+										"key": "Timer",
 										"state": []
 									}
 								]

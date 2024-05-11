@@ -113,6 +113,136 @@
 				}
 			],
 			"sid": 756218748977884
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 132371418603375,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 451185622345972,
+					"parameters": {
+						"instance-variable": "bullet_ready"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "start-timer",
+					"objectClass": "Player",
+					"sid": 536980098832760,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "1.0",
+						"type": "once",
+						"tag": "\"bullet_timer\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 373201163855452,
+					"parameters": {
+						"instance-variable": "bullet_ready",
+						"value": "false"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 917553055886583,
+					"parameters": {
+						"object-to-create": "Bullet",
+						"layer": "0",
+						"x": "Player.X",
+						"y": "Player.Y + 30",
+						"create-hierarchy": false,
+						"template-name": "\"Standard\""
+					}
+				}
+			],
+			"sid": 924833277390700
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Player",
+					"sid": 212961231859002,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"bullet_timer\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 179085082665425,
+					"parameters": {
+						"instance-variable": "bullet_ready",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 423755353776309
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Bullet",
+					"sid": 869072134630903,
+					"parameters": {
+						"object": "Criper"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Criper",
+					"sid": 682557230818368
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Bullet",
+					"sid": 558621400268863
+				}
+			],
+			"sid": 541019586694296
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Bullet",
+					"sid": 300725195526757,
+					"parameters": {
+						"object": "Obstacle"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Bullet",
+					"sid": 363128230142241
+				}
+			],
+			"sid": 263435233582751
 		}
 	],
 	"sid": 375814710823221

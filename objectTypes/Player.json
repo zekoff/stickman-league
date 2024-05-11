@@ -10,6 +10,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 201450850989015
+		},
+		{
+			"name": "bullet_ready",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 753565948570244
 		}
 	],
 	"behaviorTypes": [
@@ -32,6 +39,11 @@
 			"behaviorId": "Flash",
 			"name": "Flash",
 			"sid": 604111266029499
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 254669374774228
 		}
 	],
 	"effectTypes": [],
