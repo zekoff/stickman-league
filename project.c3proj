@@ -94,12 +94,21 @@
 			"Audio",
 			"Bullet",
 			"Keyboard",
-			"Boss"
+			"Boss",
+			"PlayerHitbox",
+			"Torpedora"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"Player",
+				"PlayerHitbox"
+			]
+		}
+	],
 	"families": {
 		"items": [
 			"Enemies"

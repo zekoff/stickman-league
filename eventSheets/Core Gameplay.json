@@ -5,8 +5,33 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 275675511214036,
+					"parameters": {
+						"object": "PlayerHitbox"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
 					"objectClass": "Player",
+					"sid": 864743197212734,
+					"parameters": {
+						"x": "PlayerHitbox.X",
+						"y": "PlayerHitbox.Y"
+					}
+				}
+			],
+			"sid": 127309795052074
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerHitbox",
 					"sid": 454970087892579,
 					"parameters": {
 						"object": "Coin"
@@ -27,7 +52,7 @@
 			"conditions": [
 				{
 					"id": "is-overlapping-another-object",
-					"objectClass": "Player",
+					"objectClass": "PlayerHitbox",
 					"sid": 902357208308350,
 					"parameters": {
 						"object": "Enemies"
@@ -158,12 +183,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 917553055886583,
+					"sid": 428320197049301,
 					"parameters": {
 						"object-to-create": "Bullet",
 						"layer": "0",
 						"x": "Player.X",
-						"y": "Player.Y + 30",
+						"y": "Player.Y -50",
 						"create-hierarchy": false,
 						"template-name": "\"Standard\""
 					}

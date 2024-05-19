@@ -38,11 +38,6 @@
 			"sid": 200178490483151
 		},
 		{
-			"behaviorId": "Platform",
-			"name": "Platform",
-			"sid": 981299364257061
-		},
-		{
 			"behaviorId": "Flash",
 			"name": "Flash",
 			"sid": 604111266029499
@@ -61,8 +56,8 @@
 					{
 						"width": 250,
 						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.492,
+						"originY": 0.968,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
