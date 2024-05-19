@@ -32,6 +32,17 @@
 						"gamepad": "0",
 						"button": "d-pad-right"
 					}
+				},
+				{
+					"id": "compare-axis",
+					"objectClass": "Gamepad",
+					"sid": 328768310769144,
+					"parameters": {
+						"gamepad": "0",
+						"axis": "left-analog-x-axis",
+						"comparison": 4,
+						"value": "10"
+					}
 				}
 			],
 			"actions": [
@@ -84,6 +95,17 @@
 						"gamepad": "0",
 						"button": "d-pad-left"
 					}
+				},
+				{
+					"id": "compare-axis",
+					"objectClass": "Gamepad",
+					"sid": 929990423118868,
+					"parameters": {
+						"gamepad": "0",
+						"axis": "left-analog-x-axis",
+						"comparison": 2,
+						"value": "-10"
+					}
 				}
 			],
 			"actions": [
@@ -118,14 +140,6 @@
 					"sid": 550563677231261,
 					"parameters": {
 						"key": 16
-					}
-				},
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 492459001253684,
-					"parameters": {
-						"key": 17
 					}
 				},
 				{
@@ -363,6 +377,14 @@
 					}
 				},
 				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Bullet",
+					"sid": 328907676707354,
+					"parameters": {
+						"instance-variable": "live"
+					}
+				},
+				{
 					"id": "is-flashing",
 					"objectClass": "Enemies",
 					"sid": 634131218796950,
@@ -392,9 +414,40 @@
 					}
 				},
 				{
-					"id": "destroy",
+					"id": "set-boolean-instvar",
 					"objectClass": "Bullet",
-					"sid": 558621400268863
+					"sid": 288433688226069,
+					"parameters": {
+						"instance-variable": "live",
+						"value": "false"
+					}
+				},
+				{
+					"id": "bounce-off-object",
+					"objectClass": "Bullet",
+					"sid": 697449782289048,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"object": "Enemies"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "Bullet",
+					"sid": 747842850573464,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "Bullet.Bullet.Speed * 0.2"
+					}
+				},
+				{
+					"id": "set-gravity",
+					"objectClass": "Bullet",
+					"sid": 983484441039584,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"gravity": "Bullet.Bullet.Gravity * 2"
+					}
 				}
 			],
 			"sid": 541019586694296
@@ -415,7 +468,36 @@
 				{
 					"id": "destroy",
 					"objectClass": "Bullet",
-					"sid": 363128230142241
+					"sid": 363128230142241,
+					"disabled": true
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "Bullet",
+					"sid": 863771272953426,
+					"disabled": true,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Bullet",
+					"sid": 636404988958655,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bullet",
+					"sid": 263901562198377,
+					"parameters": {
+						"instance-variable": "live",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 263435233582751
@@ -468,10 +550,10 @@
 				{
 					"id": "start-timer",
 					"objectClass": "Player",
-					"sid": 457832956921408,
+					"sid": 689782399279103,
 					"behaviorType": "Timer",
 					"parameters": {
-						"duration": "1.0",
+						"duration": "0.3",
 						"type": "once",
 						"tag": "\"bullet_timer\""
 					}
@@ -517,9 +599,18 @@
 					],
 					"actions": [
 						{
+							"id": "set-angle",
+							"objectClass": "Bullet",
+							"sid": 121942373124811,
+							"parameters": {
+								"angle": "random(-10,-5)"
+							}
+						},
+						{
 							"id": "set-angle-of-motion",
 							"objectClass": "Bullet",
 							"sid": 929619999985761,
+							"disabled": true,
 							"behaviorType": "Bullet",
 							"parameters": {
 								"angle": "0"
@@ -538,6 +629,14 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "Bullet",
+							"sid": 881309998087513,
+							"parameters": {
+								"angle": "random(185, 190)"
+							}
+						},
 						{
 							"id": "set-angle-of-motion",
 							"objectClass": "Bullet",

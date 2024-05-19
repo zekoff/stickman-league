@@ -679,13 +679,15 @@
 						"live-preview": false
 					},
 					"uid": 24,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"live": true
+					},
 					"behaviors": {
 						"Bullet": {
 							"properties": {
-								"speed": 400,
-								"acceleration": 0,
-								"gravity": 0,
+								"speed": 1000,
+								"acceleration": -600,
+								"gravity": 1000,
 								"bounce-off-solids": false,
 								"set-angle": true,
 								"step": false,
@@ -729,7 +731,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "live",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -865,10 +872,10 @@
 						"replicasUIDs": null
 					},
 					"world": {
-						"x": 322.96742086302214,
-						"y": 534.6032639464432,
-						"width": 67.88578324249568,
-						"height": 67.88578324249568,
+						"x": 313.1540444668559,
+						"y": 524.789887550277,
+						"width": 48.259030450163166,
+						"height": 48.259030450163166,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
