@@ -678,6 +678,16 @@
 					"parameters": {
 						"instance-variable": "bullet_ready"
 					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Player",
+					"sid": 507641513284653,
+					"parameters": {
+						"instance-variable": "ammo",
+						"comparison": 4,
+						"value": "0"
+					}
 				}
 			],
 			"actions": [
@@ -720,6 +730,15 @@
 					"sid": 726071220243642,
 					"parameters": {
 						"angle": "aimDirection"
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Player",
+					"sid": 361981948025142,
+					"parameters": {
+						"instance-variable": "ammo",
+						"value": "1"
 					}
 				}
 			],
@@ -794,6 +813,107 @@
 					"disabled": true
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerHitbox",
+					"sid": 449311406646648,
+					"parameters": {
+						"object": "Bullet"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Bullet",
+					"sid": 193378965510849,
+					"parameters": {
+						"instance-variable": "live"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Bullet",
+					"sid": 777970868162457
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Player",
+					"sid": 572836272972927,
+					"parameters": {
+						"instance-variable": "ammo",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 497181826382169
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 608098856527595
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "StatusDisplay",
+					"sid": 261760999649851,
+					"parameters": {
+						"instance-variable": "handle",
+						"comparison": 0,
+						"value": "\"health\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "StatusDisplay",
+					"sid": 447721389995141,
+					"parameters": {
+						"text": "\"Health: \" & Player.health"
+					}
+				}
+			],
+			"sid": 368575148875668
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 928712484959343
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "StatusDisplay",
+					"sid": 451135084308764,
+					"parameters": {
+						"instance-variable": "handle",
+						"comparison": 0,
+						"value": "\"ammo\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "StatusDisplay",
+					"sid": 464788012030337,
+					"parameters": {
+						"text": "\"Ammo: \" & Player.ammo"
+					}
+				}
+			],
+			"sid": 171409796411470
 		}
 	],
 	"sid": 375814710823221

@@ -2,7 +2,7 @@
 	"name": "Test Layout",
 	"layers": [
 		{
-			"name": "Layer 0",
+			"name": "Gameplay",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -1142,7 +1142,8 @@
 						"health": 4,
 						"bullet_ready": true,
 						"facing": "\"right\"",
-						"aimDirection": 0
+						"aimDirection": 0,
+						"ammo": 8
 					},
 					"behaviors": {
 						"Flash": {
@@ -1203,6 +1204,10 @@
 											},
 											{
 												"iv": "aimDirection",
+												"state": true
+											},
+											{
+												"iv": "ammo",
 												"state": true
 											}
 										]
@@ -7388,6 +7393,40 @@
 				1
 			],
 			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Text",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 128885776373300,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,

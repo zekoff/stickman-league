@@ -17,6 +17,11 @@
 			"behaviorId": "Bullet",
 			"name": "Bullet",
 			"sid": 694065576324154
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 586450379967448
 		}
 	],
 	"effectTypes": [],
