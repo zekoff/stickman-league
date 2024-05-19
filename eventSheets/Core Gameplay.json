@@ -2,6 +2,192 @@
 	"name": "Core Gameplay",
 	"events": [
 		{
+			"eventType": "comment",
+			"text": "Controls"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 493009050888302,
+					"parameters": {
+						"key": 39
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 811821801021463,
+					"parameters": {
+						"key": 68
+					}
+				},
+				{
+					"id": "is-button-down",
+					"objectClass": "Gamepad",
+					"sid": 330476378933886,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-right"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "PlayerHitbox",
+					"sid": 925610703069616,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 260388734432393,
+					"parameters": {
+						"instance-variable": "facing",
+						"value": "\"right\""
+					}
+				}
+			],
+			"sid": 880484312351061,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 419837968107114,
+					"parameters": {
+						"key": 37
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 477952995110181,
+					"parameters": {
+						"key": 65
+					}
+				},
+				{
+					"id": "is-button-down",
+					"objectClass": "Gamepad",
+					"sid": 379316920717873,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-left"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "PlayerHitbox",
+					"sid": 891908014237594,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "left"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 174854210328047,
+					"parameters": {
+						"instance-variable": "facing",
+						"value": "\"left\""
+					}
+				}
+			],
+			"sid": 930905102875196,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 550563677231261,
+					"parameters": {
+						"key": 16
+					}
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 492459001253684,
+					"parameters": {
+						"key": 17
+					}
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 971872186981052,
+					"parameters": {
+						"gamepad": "0",
+						"button": "button-a"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "PlayerHitbox",
+					"sid": 925063804776916,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				}
+			],
+			"sid": 932156525706537,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 615749316618114,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 991367987847143,
+					"parameters": {
+						"gamepad": "0",
+						"button": "button-x"
+					}
+				}
+			],
+			"actions": [
+				{
+					"customAction": "Shoot",
+					"objectClass": "Player",
+					"sid": 357040744503042
+				}
+			],
+			"sid": 849710512568658,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "comment",
+			"text": "Logic"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -143,114 +329,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 132371418603375,
-					"parameters": {
-						"key": 32
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Player",
-					"sid": 451185622345972,
-					"parameters": {
-						"instance-variable": "bullet_ready"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "start-timer",
-					"objectClass": "Player",
-					"sid": 536980098832760,
-					"behaviorType": "Timer",
-					"parameters": {
-						"duration": "1.0",
-						"type": "once",
-						"tag": "\"bullet_timer\""
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Player",
-					"sid": 373201163855452,
-					"parameters": {
-						"instance-variable": "bullet_ready",
-						"value": "false"
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 428320197049301,
-					"parameters": {
-						"object-to-create": "Bullet",
-						"layer": "0",
-						"x": "Player.X",
-						"y": "Player.Y -50",
-						"create-hierarchy": false,
-						"template-name": "\"Standard\""
-					}
-				}
-			],
-			"sid": 924833277390700,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Player",
-							"sid": 380482074647707,
-							"parameters": {
-								"instance-variable": "facing",
-								"comparison": 0,
-								"value": "\"right\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-angle-of-motion",
-							"objectClass": "Bullet",
-							"sid": 282799192616918,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"angle": "0"
-							}
-						}
-					],
-					"sid": 633155221844461
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 271488052633493
-						}
-					],
-					"actions": [
-						{
-							"id": "set-angle-of-motion",
-							"objectClass": "Bullet",
-							"sid": 216458623200475,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"angle": "180"
-							}
-						}
-					],
-					"sid": 752059188741173
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-timer",
 					"objectClass": "Player",
 					"sid": 212961231859002,
@@ -346,56 +424,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 572009717728027,
-					"parameters": {
-						"key": 39
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Player",
-					"sid": 143415806825672,
-					"parameters": {
-						"instance-variable": "facing",
-						"value": "\"right\""
-					}
-				}
-			],
-			"sid": 591733195793716
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 528086791464010,
-					"parameters": {
-						"key": 37
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Player",
-					"sid": 624279557780897,
-					"parameters": {
-						"instance-variable": "facing",
-						"value": "\"left\""
-					}
-				}
-			],
-			"sid": 257189268406150
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "compare-instance-variable",
 					"objectClass": "Enemies",
 					"sid": 941039386557376,
@@ -414,6 +442,115 @@
 				}
 			],
 			"sid": 246381562698209
+		},
+		{
+			"aceType": "action",
+			"aceName": "Shoot",
+			"objectClass": "Player",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 243175927335656,
+					"parameters": {
+						"instance-variable": "bullet_ready"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "start-timer",
+					"objectClass": "Player",
+					"sid": 457832956921408,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "1.0",
+						"type": "once",
+						"tag": "\"bullet_timer\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 320943018162231,
+					"parameters": {
+						"instance-variable": "bullet_ready",
+						"value": "false"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 244510641155691,
+					"parameters": {
+						"object-to-create": "Bullet",
+						"layer": "0",
+						"x": "Player.X",
+						"y": "Player.Y -50",
+						"create-hierarchy": false,
+						"template-name": "\"Standard\""
+					}
+				}
+			],
+			"sid": 392185212827732,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 203583790780032,
+							"parameters": {
+								"instance-variable": "facing",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "Bullet",
+							"sid": 929619999985761,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 605695721691949
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 185718129064758
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "Bullet",
+							"sid": 333415591212549,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 102379153543644
+				}
+			]
 		}
 	],
 	"sid": 375814710823221

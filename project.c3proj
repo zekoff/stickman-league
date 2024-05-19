@@ -28,6 +28,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
@@ -96,7 +103,8 @@
 			"Keyboard",
 			"Boss",
 			"PlayerHitbox",
-			"Torpedora"
+			"Torpedora",
+			"Gamepad"
 		],
 		"subfolders": []
 	},

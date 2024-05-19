@@ -28,16 +28,6 @@
 	],
 	"behaviorTypes": [
 		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 329802347436332
-		},
-		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 200178490483151
-		},
-		{
 			"behaviorId": "Flash",
 			"name": "Flash",
 			"sid": 604111266029499

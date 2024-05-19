@@ -9,6 +9,16 @@
 			"behaviorId": "Platform",
 			"name": "Platform",
 			"sid": 475478613706357
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 413558307782121
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 354304255469934
 		}
 	],
 	"effectTypes": [],

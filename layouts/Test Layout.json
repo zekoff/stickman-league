@@ -1144,16 +1144,6 @@
 						"facing": "\"right\""
 					},
 					"behaviors": {
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
-							}
-						},
-						"ScrollTo": {
-							"properties": {
-								"enabled": true
-							}
-						},
 						"Flash": {
 							"properties": {}
 						},
@@ -1217,24 +1207,6 @@
 							{
 								"id": "behavior",
 								"component": [
-									{
-										"key": "BoundToLayout",
-										"state": [
-											[
-												"bound-by",
-												true
-											]
-										]
-									},
-									{
-										"key": "ScrollTo",
-										"state": [
-											[
-												"enabled",
-												true
-											]
-										]
-									},
 									{
 										"key": "Flash",
 										"state": []
