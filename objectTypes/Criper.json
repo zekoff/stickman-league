@@ -6,11 +6,6 @@
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Platform",
-			"name": "Platform",
-			"sid": 458977305237664
-		},
-		{
 			"behaviorId": "Sin",
 			"name": "Sine",
 			"sid": 337058138535480

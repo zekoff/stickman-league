@@ -1,0 +1,36 @@
+{
+	"name": "Enemies",
+	"plugin-id": "Sprite",
+	"sid": 441067491012088,
+	"instanceVariables": [
+		{
+			"name": "health",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 594805444097087
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 332991691626709
+		},
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 355572238961177
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 559842095880073
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Boss",
+		"Criper"
+	]
+}

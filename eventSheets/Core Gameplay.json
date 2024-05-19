@@ -28,9 +28,9 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Player",
-					"sid": 902952634263215,
+					"sid": 902357208308350,
 					"parameters": {
-						"object": "Criper"
+						"object": "Enemies"
 					}
 				},
 				{
@@ -254,17 +254,39 @@
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Bullet",
-					"sid": 869072134630903,
+					"sid": 947776456493192,
 					"parameters": {
-						"object": "Criper"
+						"object": "Enemies"
 					}
+				},
+				{
+					"id": "is-flashing",
+					"objectClass": "Enemies",
+					"sid": 634131218796950,
+					"behaviorType": "Flash",
+					"isInverted": true
 				}
 			],
 			"actions": [
 				{
-					"id": "destroy",
-					"objectClass": "Criper",
-					"sid": 682557230818368
+					"id": "subtract-from-instvar",
+					"objectClass": "Enemies",
+					"sid": 787097513283541,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Enemies",
+					"sid": 496184717854905,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.3",
+						"off-time": "0.1",
+						"duration": "3"
+					}
 				},
 				{
 					"id": "destroy",
@@ -344,6 +366,29 @@
 				}
 			],
 			"sid": 257189268406150
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Enemies",
+					"sid": 941039386557376,
+					"parameters": {
+						"instance-variable": "health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Enemies",
+					"sid": 422613148047011
+				}
+			],
+			"sid": 246381562698209
 		}
 	],
 	"sid": 375814710823221

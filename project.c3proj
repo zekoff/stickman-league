@@ -93,14 +93,17 @@
 			"Criper",
 			"Audio",
 			"Bullet",
-			"Keyboard"
+			"Keyboard",
+			"Boss"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Enemies"
+		],
 		"subfolders": []
 	},
 	"layouts": {
