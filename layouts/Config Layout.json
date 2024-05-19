@@ -685,9 +685,9 @@
 					"behaviors": {
 						"Bullet": {
 							"properties": {
-								"speed": 1000,
-								"acceleration": -600,
-								"gravity": 1000,
+								"speed": 1600,
+								"acceleration": -1200,
+								"gravity": 2000,
 								"bounce-off-solids": false,
 								"set-angle": true,
 								"step": false,
@@ -1466,7 +1466,8 @@
 					"instanceVariables": {
 						"health": 4,
 						"bullet_ready": true,
-						"facing": "\"right\""
+						"facing": "\"right\"",
+						"aimDirection": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -1523,6 +1524,10 @@
 											},
 											{
 												"iv": "facing",
+												"state": true
+											},
+											{
+												"iv": "aimDirection",
 												"state": true
 											}
 										]

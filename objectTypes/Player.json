@@ -24,6 +24,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 780028004919212
+		},
+		{
+			"name": "aimDirection",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 452020874674315
 		}
 	],
 	"behaviorTypes": [

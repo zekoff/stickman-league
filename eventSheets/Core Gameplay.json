@@ -63,6 +63,15 @@
 						"instance-variable": "facing",
 						"value": "\"right\""
 					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 471743881790446,
+					"parameters": {
+						"instance-variable": "aimDirection",
+						"value": "0"
+					}
 				}
 			],
 			"sid": 880484312351061,
@@ -126,10 +135,69 @@
 						"instance-variable": "facing",
 						"value": "\"left\""
 					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 995455360879757,
+					"parameters": {
+						"instance-variable": "aimDirection",
+						"value": "180"
+					}
 				}
 			],
 			"sid": 930905102875196,
 			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 498196101250929,
+					"parameters": {
+						"key": 38
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 534593011193222,
+					"parameters": {
+						"instance-variable": "aimDirection",
+						"value": "270"
+					}
+				}
+			],
+			"sid": 359243701330929
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 742899366498544,
+					"parameters": {
+						"key": 40
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 984485664055995,
+					"parameters": {
+						"instance-variable": "aimDirection",
+						"value": "90"
+					}
+				}
+			],
+			"sid": 920439688342610
 		},
 		{
 			"eventType": "block",
@@ -191,10 +259,68 @@
 				{
 					"customAction": "Shoot",
 					"objectClass": "Player",
-					"sid": 357040744503042
+					"sid": 357040744503042,
+					"disabled": true,
+					"parameters": [
+						"0"
+					]
 				}
 			],
 			"sid": 849710512568658,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "gamepadAxisDirection",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 153950273459418
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-gamepads",
+							"objectClass": "Gamepad",
+							"sid": 250773037096211
+						}
+					],
+					"actions": [
+						{
+							"customAction": "Shoot",
+							"objectClass": "Player",
+							"sid": 682317584724609,
+							"parameters": [
+								"angle(0, 0, Gamepad.Axis(0, 0), Gamepad.Axis(0, 1))"
+							]
+						}
+					],
+					"sid": 554893711632043
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 673444323455913
+						}
+					],
+					"actions": [
+						{
+							"customAction": "Shoot",
+							"objectClass": "Player",
+							"sid": 979694173744075,
+							"parameters": [
+								"Player.aimDirection"
+							]
+						}
+					],
+					"sid": 867665263067782
+				}
+			],
 			"isOrBlock": true
 		},
 		{
@@ -534,7 +660,15 @@
 			"functionReturnType": "none",
 			"functionCopyPicked": false,
 			"functionIsAsync": false,
-			"functionParameters": [],
+			"functionParameters": [
+				{
+					"name": "aimDirection",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 412466838313095
+				}
+			],
 			"eventType": "custom-ace-block",
 			"conditions": [
 				{
@@ -579,6 +713,14 @@
 						"create-hierarchy": false,
 						"template-name": "\"Standard\""
 					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Bullet",
+					"sid": 726071220243642,
+					"parameters": {
+						"angle": "aimDirection"
+					}
 				}
 			],
 			"sid": 392185212827732,
@@ -617,7 +759,8 @@
 							}
 						}
 					],
-					"sid": 605695721691949
+					"sid": 605695721691949,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -647,7 +790,8 @@
 							}
 						}
 					],
-					"sid": 102379153543644
+					"sid": 102379153543644,
+					"disabled": true
 				}
 			]
 		}

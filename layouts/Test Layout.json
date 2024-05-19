@@ -1141,7 +1141,8 @@
 					"instanceVariables": {
 						"health": 4,
 						"bullet_ready": true,
-						"facing": "\"right\""
+						"facing": "\"right\"",
+						"aimDirection": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -1198,6 +1199,10 @@
 											},
 											{
 												"iv": "facing",
+												"state": true
+											},
+											{
+												"iv": "aimDirection",
 												"state": true
 											}
 										]
