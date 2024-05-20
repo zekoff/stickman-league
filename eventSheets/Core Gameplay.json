@@ -67,10 +67,10 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Player",
-					"sid": 471743881790446,
+					"sid": 636932828880405,
 					"parameters": {
 						"instance-variable": "aimDirection",
-						"value": "0"
+						"value": "-10"
 					}
 				}
 			],
@@ -139,10 +139,10 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Player",
-					"sid": 995455360879757,
+					"sid": 623385538409637,
 					"parameters": {
 						"instance-variable": "aimDirection",
-						"value": "180"
+						"value": "190"
 					}
 				}
 			],
@@ -159,6 +159,14 @@
 					"parameters": {
 						"key": 38
 					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 333006205249247,
+					"parameters": {
+						"key": 87
+					}
 				}
 			],
 			"actions": [
@@ -172,7 +180,8 @@
 					}
 				}
 			],
-			"sid": 359243701330929
+			"sid": 359243701330929,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -183,6 +192,14 @@
 					"sid": 742899366498544,
 					"parameters": {
 						"key": 40
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 210173945608470,
+					"parameters": {
+						"key": 83
 					}
 				}
 			],
@@ -197,7 +214,8 @@
 					}
 				}
 			],
-			"sid": 920439688342610
+			"sid": 920439688342610,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -326,6 +344,80 @@
 		{
 			"eventType": "comment",
 			"text": "Logic"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 770529855020795
+				}
+			],
+			"actions": [
+				{
+					"id": "start-timer",
+					"objectClass": "EnemySpawner",
+					"sid": 928393404308465,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "EnemySpawner.spawnTime",
+						"type": "once",
+						"tag": "\"spawn\""
+					}
+				}
+			],
+			"sid": 314727961742328
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "EnemySpawner",
+					"sid": 184863900137173,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"spawn\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object-by-name",
+					"objectClass": "System",
+					"sid": 900009885075679,
+					"parameters": {
+						"object-name": "choose(\"Criper\", \"Torpedora\")",
+						"layer": "\"Gameplay\"",
+						"x": "Player.X + random(-500, 500)",
+						"y": "Player.Y + random(-50, -100)",
+						"create-hierarchy": false,
+						"template-name": "\"Standard\""
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "EnemySpawner",
+					"sid": 195356527186447,
+					"parameters": {
+						"instance-variable": "spawnTime",
+						"value": "EnemySpawner.spawnTime * 0.05"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "EnemySpawner",
+					"sid": 748639841661524,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "EnemySpawner.spawnTime",
+						"type": "once",
+						"tag": "\"spawn\""
+					}
+				}
+			],
+			"sid": 716916417646076
 		},
 		{
 			"eventType": "block",
@@ -647,6 +739,15 @@
 					"id": "destroy",
 					"objectClass": "Enemies",
 					"sid": 422613148047011
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Player",
+					"sid": 529795743441909,
+					"parameters": {
+						"instance-variable": "score",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 246381562698209
@@ -914,6 +1015,37 @@
 				}
 			],
 			"sid": 171409796411470
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 138007710140987
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "StatusDisplay",
+					"sid": 371330290744416,
+					"parameters": {
+						"instance-variable": "handle",
+						"comparison": 0,
+						"value": "\"score\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "StatusDisplay",
+					"sid": 784122687759532,
+					"parameters": {
+						"text": "\"Score: \" & Player.score"
+					}
+				}
+			],
+			"sid": 739935396485227
 		}
 	],
 	"sid": 375814710823221

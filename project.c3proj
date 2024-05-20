@@ -112,7 +112,8 @@
 			"PlayerHitbox",
 			"Torpedora",
 			"Gamepad",
-			"StatusDisplay"
+			"StatusDisplay",
+			"EnemySpawner"
 		],
 		"subfolders": []
 	},
@@ -134,7 +135,8 @@
 	"layouts": {
 		"items": [
 			"Test Layout",
-			"Config Layout"
+			"Config Layout",
+			"Arena 1"
 		],
 		"subfolders": []
 	},

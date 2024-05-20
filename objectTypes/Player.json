@@ -38,6 +38,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 333943045087452
+		},
+		{
+			"name": "score",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 243382240434065
 		}
 	],
 	"behaviorTypes": [

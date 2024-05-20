@@ -1143,7 +1143,8 @@
 						"bullet_ready": true,
 						"facing": "\"right\"",
 						"aimDirection": 0,
-						"ammo": 8
+						"ammo": 5,
+						"score": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -1208,6 +1209,10 @@
 											},
 											{
 												"iv": "ammo",
+												"state": true
+											},
+											{
+												"iv": "score",
 												"state": true
 											}
 										]
@@ -2433,47 +2438,6 @@
 								"id": "behavior",
 								"component": [
 									{
-										"key": "Sine",
-										"state": [
-											[
-												"movement",
-												true
-											],
-											[
-												"wave",
-												true
-											],
-											[
-												"period",
-												true
-											],
-											[
-												"period-random",
-												true
-											],
-											[
-												"period-offset",
-												true
-											],
-											[
-												"period-offset-random",
-												true
-											],
-											[
-												"magnitude",
-												true
-											],
-											[
-												"magnitude-random",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
 										"key": "Flash",
 										"state": []
 									},
@@ -2527,6 +2491,47 @@
 										"state": [
 											[
 												"bound-by",
+												true
+											]
+										]
+									},
+									{
+										"key": "Sine",
+										"state": [
+											[
+												"movement",
+												true
+											],
+											[
+												"wave",
+												true
+											],
+											[
+												"period",
+												true
+											],
+											[
+												"period-random",
+												true
+											],
+											[
+												"period-offset",
+												true
+											],
+											[
+												"period-offset-random",
+												true
+											],
+											[
+												"magnitude",
+												true
+											],
+											[
+												"magnitude-random",
+												true
+											],
+											[
+												"enabled",
 												true
 											]
 										]
@@ -2743,47 +2748,6 @@
 								"id": "behavior",
 								"component": [
 									{
-										"key": "Sine",
-										"state": [
-											[
-												"movement",
-												true
-											],
-											[
-												"wave",
-												true
-											],
-											[
-												"period",
-												true
-											],
-											[
-												"period-random",
-												true
-											],
-											[
-												"period-offset",
-												true
-											],
-											[
-												"period-offset-random",
-												true
-											],
-											[
-												"magnitude",
-												true
-											],
-											[
-												"magnitude-random",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
 										"key": "Flash",
 										"state": []
 									},
@@ -2837,6 +2801,47 @@
 										"state": [
 											[
 												"bound-by",
+												true
+											]
+										]
+									},
+									{
+										"key": "Sine",
+										"state": [
+											[
+												"movement",
+												true
+											],
+											[
+												"wave",
+												true
+											],
+											[
+												"period",
+												true
+											],
+											[
+												"period-random",
+												true
+											],
+											[
+												"period-offset",
+												true
+											],
+											[
+												"period-offset-random",
+												true
+											],
+											[
+												"magnitude",
+												true
+											],
+											[
+												"magnitude-random",
+												true
+											],
+											[
+												"enabled",
 												true
 											]
 										]
@@ -3053,47 +3058,6 @@
 								"id": "behavior",
 								"component": [
 									{
-										"key": "Sine",
-										"state": [
-											[
-												"movement",
-												true
-											],
-											[
-												"wave",
-												true
-											],
-											[
-												"period",
-												true
-											],
-											[
-												"period-random",
-												true
-											],
-											[
-												"period-offset",
-												true
-											],
-											[
-												"period-offset-random",
-												true
-											],
-											[
-												"magnitude",
-												true
-											],
-											[
-												"magnitude-random",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
 										"key": "Flash",
 										"state": []
 									},
@@ -3147,6 +3111,47 @@
 										"state": [
 											[
 												"bound-by",
+												true
+											]
+										]
+									},
+									{
+										"key": "Sine",
+										"state": [
+											[
+												"movement",
+												true
+											],
+											[
+												"wave",
+												true
+											],
+											[
+												"period",
+												true
+											],
+											[
+												"period-random",
+												true
+											],
+											[
+												"period-offset",
+												true
+											],
+											[
+												"period-offset-random",
+												true
+											],
+											[
+												"magnitude",
+												true
+											],
+											[
+												"magnitude-random",
+												true
+											],
+											[
+												"enabled",
 												true
 											]
 										]
@@ -3363,47 +3368,6 @@
 								"id": "behavior",
 								"component": [
 									{
-										"key": "Sine",
-										"state": [
-											[
-												"movement",
-												true
-											],
-											[
-												"wave",
-												true
-											],
-											[
-												"period",
-												true
-											],
-											[
-												"period-random",
-												true
-											],
-											[
-												"period-offset",
-												true
-											],
-											[
-												"period-offset-random",
-												true
-											],
-											[
-												"magnitude",
-												true
-											],
-											[
-												"magnitude-random",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
 										"key": "Flash",
 										"state": []
 									},
@@ -3457,6 +3421,47 @@
 										"state": [
 											[
 												"bound-by",
+												true
+											]
+										]
+									},
+									{
+										"key": "Sine",
+										"state": [
+											[
+												"movement",
+												true
+											],
+											[
+												"wave",
+												true
+											],
+											[
+												"period",
+												true
+											],
+											[
+												"period-random",
+												true
+											],
+											[
+												"period-offset",
+												true
+											],
+											[
+												"period-offset-random",
+												true
+											],
+											[
+												"magnitude",
+												true
+											],
+											[
+												"magnitude-random",
+												true
+											],
+											[
+												"enabled",
 												true
 											]
 										]
@@ -5402,6 +5407,64 @@
 								"id": "behavior",
 								"component": [
 									{
+										"key": "Flash",
+										"state": []
+									},
+									{
+										"key": "Platform",
+										"state": [
+											[
+												"max-speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"deceleration",
+												true
+											],
+											[
+												"jump-strength",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"max-fall-speed",
+												true
+											],
+											[
+												"double-jump",
+												true
+											],
+											[
+												"jump-sustain",
+												true
+											],
+											[
+												"default-controls",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "BoundToLayout",
+										"state": [
+											[
+												"bound-by",
+												true
+											]
+										]
+									},
+									{
 										"key": "HorizontalMovement",
 										"state": [
 											[
@@ -5520,64 +5583,6 @@
 											],
 											[
 												"enabled",
-												true
-											]
-										]
-									},
-									{
-										"key": "Flash",
-										"state": []
-									},
-									{
-										"key": "Platform",
-										"state": [
-											[
-												"max-speed",
-												true
-											],
-											[
-												"acceleration",
-												true
-											],
-											[
-												"deceleration",
-												true
-											],
-											[
-												"jump-strength",
-												true
-											],
-											[
-												"gravity",
-												true
-											],
-											[
-												"max-fall-speed",
-												true
-											],
-											[
-												"double-jump",
-												true
-											],
-											[
-												"jump-sustain",
-												true
-											],
-											[
-												"default-controls",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
-										"key": "BoundToLayout",
-										"state": [
-											[
-												"bound-by",
 												true
 											]
 										]
@@ -7373,6 +7378,188 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "EnemySpawner",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 48,
+					"instanceVariables": {
+						"spawnTime": 6
+					},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"template": {
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "Standard",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"initial-animation",
+												true
+											],
+											[
+												"initial-frame",
+												true
+											],
+											[
+												"enable-collisions",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "spawnTime",
+												"state": true
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": [
+									{
+										"key": "Timer",
+										"state": []
+									}
+								]
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						],
+						"replicasUIDs": null
+					},
+					"world": {
+						"x": 2569,
+						"y": 242,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 327991774066352,
@@ -7427,8 +7614,8 @@
 				1
 			],
 			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
+			"parallaxX": 0,
+			"parallaxY": 0,
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
