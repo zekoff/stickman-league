@@ -370,7 +370,7 @@
 					},
 					"uid": 19,
 					"instanceVariables": {
-						"health": 1,
+						"health": 2,
 						"oldX": 0
 					},
 					"behaviors": {

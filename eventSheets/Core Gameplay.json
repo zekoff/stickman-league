@@ -623,12 +623,12 @@
 				{
 					"id": "flash",
 					"objectClass": "Enemies",
-					"sid": 496184717854905,
+					"sid": 612322157572528,
 					"behaviorType": "Flash",
 					"parameters": {
-						"on-time": "0.3",
+						"on-time": "0.2",
 						"off-time": "0.1",
-						"duration": "3"
+						"duration": "1"
 					}
 				},
 				{
