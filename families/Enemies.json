@@ -9,6 +9,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 594805444097087
+		},
+		{
+			"name": "oldX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 394947929720033
 		}
 	],
 	"behaviorTypes": [

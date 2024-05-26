@@ -2349,7 +2349,8 @@
 					},
 					"uid": 20,
 					"instanceVariables": {
-						"health": 1
+						"health": 1,
+						"oldX": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -2428,6 +2429,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "oldX",
 												"state": true
 											}
 										]
@@ -2659,7 +2664,8 @@
 					},
 					"uid": 21,
 					"instanceVariables": {
-						"health": 1
+						"health": 1,
+						"oldX": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -2738,6 +2744,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "oldX",
 												"state": true
 											}
 										]
@@ -2969,7 +2979,8 @@
 					},
 					"uid": 22,
 					"instanceVariables": {
-						"health": 1
+						"health": 1,
+						"oldX": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -3048,6 +3059,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "oldX",
 												"state": true
 											}
 										]
@@ -3279,7 +3294,8 @@
 					},
 					"uid": 23,
 					"instanceVariables": {
-						"health": 1
+						"health": 1,
+						"oldX": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -3358,6 +3374,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "oldX",
 												"state": true
 											}
 										]
@@ -3589,7 +3609,8 @@
 					},
 					"uid": 27,
 					"instanceVariables": {
-						"health": 5
+						"health": 5,
+						"oldX": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -3668,6 +3689,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "oldX",
 												"state": true
 											}
 										]
@@ -5290,7 +5315,8 @@
 					},
 					"uid": 38,
 					"instanceVariables": {
-						"health": 1
+						"health": 1,
+						"oldX": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -5397,6 +5423,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "oldX",
 												"state": true
 											}
 										]
@@ -5710,7 +5740,8 @@
 					},
 					"uid": 39,
 					"instanceVariables": {
-						"health": 1
+						"health": 1,
+						"oldX": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -5817,6 +5848,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "oldX",
 												"state": true
 											}
 										]
@@ -6130,7 +6165,8 @@
 					},
 					"uid": 40,
 					"instanceVariables": {
-						"health": 1
+						"health": 1,
+						"oldX": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -6237,6 +6273,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "oldX",
 												"state": true
 											}
 										]
@@ -6550,7 +6590,8 @@
 					},
 					"uid": 41,
 					"instanceVariables": {
-						"health": 1
+						"health": 1,
+						"oldX": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -6657,6 +6698,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "oldX",
 												"state": true
 											}
 										]
@@ -6970,7 +7015,8 @@
 					},
 					"uid": 42,
 					"instanceVariables": {
-						"health": 1
+						"health": 1,
+						"oldX": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -7077,6 +7123,10 @@
 										"state": [
 											{
 												"iv": "health",
+												"state": true
+											},
+											{
+												"iv": "oldX",
 												"state": true
 											}
 										]
