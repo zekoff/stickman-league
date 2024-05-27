@@ -343,7 +343,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "Logic"
+			"text": "Gameplay Logic"
 		},
 		{
 			"eventType": "block",
@@ -461,6 +461,15 @@
 					"id": "destroy",
 					"objectClass": "Coin",
 					"sid": 898051562373782
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Player",
+					"sid": 335011394612294,
+					"parameters": {
+						"instance-variable": "score",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 626455883908564
@@ -530,32 +539,6 @@
 				}
 			],
 			"sid": 794464234650653
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 133282551757584
-				}
-			],
-			"actions": [
-				{
-					"id": "play-by-name",
-					"objectClass": "Audio",
-					"sid": 576174861734403,
-					"parameters": {
-						"folder": "music",
-						"audio-file-name": "choose(\"badder_song\", \"beater_song\")",
-						"loop": "looping",
-						"volume": "-12",
-						"stereo-pan": "0",
-						"tag-optional": "\"music\""
-					}
-				}
-			],
-			"sid": 756218748977884
 		},
 		{
 			"eventType": "block",
@@ -955,6 +938,10 @@
 			"sid": 497181826382169
 		},
 		{
+			"eventType": "comment",
+			"text": "UI and Music"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -1048,6 +1035,32 @@
 			"sid": 739935396485227
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 467685183397188
+				}
+			],
+			"actions": [
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 302457966396700,
+					"parameters": {
+						"folder": "music",
+						"audio-file-name": "choose(\"badder_song\", \"beater_song\")",
+						"loop": "looping",
+						"volume": "-12",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 508054076816089
+		},
+		{
 			"eventType": "comment",
 			"text": "Enemy facing"
 		},
@@ -1115,10 +1128,200 @@
 			"sid": 580866326097051
 		},
 		{
+			"eventType": "comment",
+			"text": "Player Animation"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-jump",
+					"objectClass": "PlayerHitbox",
+					"sid": 414276160019370,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 534445478853019,
+					"parameters": {
+						"animation": "\"Jumping\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 565288580119244
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-landed",
+					"objectClass": "PlayerHitbox",
+					"sid": 335215671018124,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [],
+			"sid": 647201221416541,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "PlayerHitbox",
+							"sid": 346930709146154,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 617790998001861,
+							"parameters": {
+								"animation": "\"Running\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 837500316357236
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 710613293570899
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 847091820988460,
+							"parameters": {
+								"animation": "\"Standing\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 697608694552454
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-moved",
+					"objectClass": "PlayerHitbox",
+					"sid": 868294267208549,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 835435285439547,
+					"parameters": {
+						"animation": "\"Running\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 556365393670847
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-stopped",
+					"objectClass": "PlayerHitbox",
+					"sid": 788272309351518,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 605169466161782,
+					"parameters": {
+						"animation": "\"Standing\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 666294222276794
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Player",
+					"sid": 721634217101122,
+					"parameters": {
+						"instance-variable": "oldX",
+						"comparison": 2,
+						"value": "Player.X"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 475166123251724,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 638474845948738
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 914317792475966
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 909439416693774,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 449305811942793
+		},
+		{
 			"eventType": "block",
 			"conditions": [],
-			"actions": [],
-			"sid": 322613541419637
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 858568974210376,
+					"parameters": {
+						"instance-variable": "oldX",
+						"value": "Player.X"
+					}
+				}
+			],
+			"sid": 481951143078220
 		}
 	],
 	"sid": 375814710823221

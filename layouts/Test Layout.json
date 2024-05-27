@@ -1132,7 +1132,7 @@
 					"type": "Player",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Standing",
 						"initial-frame": 0,
 						"enable-collisions": false,
 						"live-preview": false
@@ -1144,7 +1144,8 @@
 						"facing": "\"right\"",
 						"aimDirection": 0,
 						"ammo": 5,
-						"score": 0
+						"score": 0,
+						"oldX": 0
 					},
 					"behaviors": {
 						"Flash": {
@@ -1213,6 +1214,10 @@
 											},
 											{
 												"iv": "score",
+												"state": true
+											},
+											{
+												"iv": "oldX",
 												"state": true
 											}
 										]

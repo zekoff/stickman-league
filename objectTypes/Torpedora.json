@@ -60,15 +60,50 @@
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
+					},
+					{
+						"width": 2048,
+						"height": 1031,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4122686,
+						"collisionPoly": {
+							"points": [
+								0.97314453125,
+								0.2938894277400582,
+								0.96826171875,
+								0.5489815712900097,
+								0.83251953125,
+								0.6925315227934045,
+								0.7294921875,
+								0.7381183317167799,
+								0.6650390625,
+								0.7458777885548011,
+								0,
+								0.35208535402521823,
+								0,
+								0.23569350145489815,
+								0.099609375,
+								0.1716779825412221,
+								0.78369140625,
+								0.09020368574199807
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
 					}
 				],
 				"sid": 867834572513942,
 				"name": "Animation 2",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 2
 			}
 		],
 		"subfolders": []
