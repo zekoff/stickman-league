@@ -2349,7 +2349,7 @@
 					},
 					"uid": 20,
 					"instanceVariables": {
-						"health": 1,
+						"health": 2,
 						"oldX": 0
 					},
 					"behaviors": {
@@ -2664,7 +2664,7 @@
 					},
 					"uid": 21,
 					"instanceVariables": {
-						"health": 1,
+						"health": 2,
 						"oldX": 0
 					},
 					"behaviors": {
@@ -2979,7 +2979,7 @@
 					},
 					"uid": 22,
 					"instanceVariables": {
-						"health": 1,
+						"health": 2,
 						"oldX": 0
 					},
 					"behaviors": {
@@ -3294,7 +3294,7 @@
 					},
 					"uid": 23,
 					"instanceVariables": {
-						"health": 1,
+						"health": 2,
 						"oldX": 0
 					},
 					"behaviors": {
@@ -7440,7 +7440,7 @@
 					},
 					"uid": 48,
 					"instanceVariables": {
-						"spawnTime": 6
+						"spawnTime": 9
 					},
 					"behaviors": {
 						"Timer": {

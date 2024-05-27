@@ -113,7 +113,8 @@
 			"Torpedora",
 			"Gamepad",
 			"StatusDisplay",
-			"EnemySpawner"
+			"EnemySpawner",
+			"BossTorpedora"
 		],
 		"subfolders": []
 	},
