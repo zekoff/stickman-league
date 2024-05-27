@@ -114,7 +114,8 @@
 			"Gamepad",
 			"StatusDisplay",
 			"EnemySpawner",
-			"BossTorpedora"
+			"BossTorpedora",
+			"Gun"
 		],
 		"subfolders": []
 	},
@@ -122,6 +123,7 @@
 	"containers": [
 		{
 			"members": [
+				"Gun",
 				"Player",
 				"PlayerHitbox"
 			]

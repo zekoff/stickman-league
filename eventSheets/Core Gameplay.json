@@ -256,6 +256,60 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "has-gamepads",
+					"objectClass": "Gamepad",
+					"sid": 422382389462892
+				}
+			],
+			"actions": [],
+			"sid": 319869395660990,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 611999138499363,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 4,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 580494138061892,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 105322632141744,
+							"parameters": {
+								"instance-variable": "aimDirection",
+								"value": "angle(0, 0, Gamepad.Axis(0, 0), Gamepad.Axis(0, 1))"
+							}
+						}
+					],
+					"sid": 977199361126551,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 615749316618114,
@@ -277,10 +331,9 @@
 				{
 					"customAction": "Shoot",
 					"objectClass": "Player",
-					"sid": 357040744503042,
-					"disabled": true,
+					"sid": 713887183559840,
 					"parameters": [
-						"0"
+						"Player.aimDirection"
 					]
 				}
 			],
@@ -315,7 +368,8 @@
 							]
 						}
 					],
-					"sid": 554893711632043
+					"sid": 554893711632043,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -336,7 +390,8 @@
 							]
 						}
 					],
-					"sid": 867665263067782
+					"sid": 867665263067782,
+					"disabled": true
 				}
 			],
 			"isOrBlock": true
@@ -439,7 +494,8 @@
 					}
 				}
 			],
-			"sid": 716916417646076
+			"sid": 716916417646076,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -1219,6 +1275,27 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 888760436814569
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Gun",
+					"sid": 798805144047054,
+					"parameters": {
+						"angle": "Player.aimDirection"
+					}
+				}
+			],
+			"sid": 390675885628461
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "compare-instance-variable",
 					"objectClass": "Player",
 					"sid": 721634217101122,
@@ -1245,9 +1322,14 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 914317792475966
+					"id": "compare-instance-variable",
+					"objectClass": "Player",
+					"sid": 819605142834364,
+					"parameters": {
+						"instance-variable": "oldX",
+						"comparison": 4,
+						"value": "Player.X"
+					}
 				}
 			],
 			"actions": [
@@ -1277,6 +1359,67 @@
 				}
 			],
 			"sid": 481951143078220
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-mirrored",
+					"objectClass": "Player",
+					"sid": 552765645266435,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-flipped",
+					"objectClass": "Gun",
+					"sid": 378635934390146,
+					"parameters": {
+						"state": "not-flipped"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Gun",
+					"sid": 384285662637141,
+					"parameters": {
+						"x": "Player.X + 30",
+						"y": "Player.Y - 65"
+					}
+				}
+			],
+			"sid": 408534950814311
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 788934995218012
+				}
+			],
+			"actions": [
+				{
+					"id": "set-flipped",
+					"objectClass": "Gun",
+					"sid": 128234388293258,
+					"parameters": {
+						"state": "flipped"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Gun",
+					"sid": 279530251081323,
+					"parameters": {
+						"x": "Player.X - 30",
+						"y": "Player.Y - 65"
+					}
+				}
+			],
+			"sid": 215075323786052
 		},
 		{
 			"eventType": "block",
