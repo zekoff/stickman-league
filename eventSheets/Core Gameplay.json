@@ -351,6 +351,28 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
+					"sid": 622589564180274
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-scale",
+					"objectClass": "System",
+					"sid": 566080553591419,
+					"parameters": {
+						"layer": "0",
+						"scale": ".8"
+					}
+				}
+			],
+			"sid": 141228002889398
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
 					"sid": 770529855020795
 				}
 			],
@@ -1062,74 +1084,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "Enemy facing"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Enemies",
-					"sid": 740548209081427,
-					"parameters": {
-						"instance-variable": "oldX",
-						"comparison": 2,
-						"value": "Enemies.X"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-mirrored",
-					"objectClass": "Enemies",
-					"sid": 924108785408930,
-					"parameters": {
-						"state": "not-mirrored"
-					}
-				}
-			],
-			"sid": 695627102624615
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 676145387928307
-				}
-			],
-			"actions": [
-				{
-					"id": "set-mirrored",
-					"objectClass": "Enemies",
-					"sid": 860473426835983,
-					"parameters": {
-						"state": "mirrored"
-					}
-				}
-			],
-			"sid": 531630674847502
-		},
-		{
-			"eventType": "block",
-			"conditions": [],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Enemies",
-					"sid": 572639456436403,
-					"parameters": {
-						"instance-variable": "oldX",
-						"value": "Enemies.X"
-					}
-				}
-			],
-			"sid": 580866326097051
-		},
-		{
-			"eventType": "comment",
-			"text": "Player Animation"
+			"text": "Animations and Facing"
 		},
 		{
 			"eventType": "block",
@@ -1322,6 +1277,86 @@
 				}
 			],
 			"sid": 481951143078220
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 434356449349816,
+					"parameters": {
+						"object": "Enemies"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 161306645478710,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemies",
+							"sid": 143176591942282,
+							"parameters": {
+								"instance-variable": "oldX",
+								"comparison": 2,
+								"value": "Enemies.X"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemies",
+							"sid": 612010607072664,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 752684544289789
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 669956781088135
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemies",
+							"sid": 258615025734900,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 679494736910309
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Enemies",
+							"sid": 191355624986059,
+							"parameters": {
+								"instance-variable": "oldX",
+								"value": "Enemies.X"
+							}
+						}
+					],
+					"sid": 797410667318981
+				}
+			]
 		}
 	],
 	"sid": 375814710823221
