@@ -108,7 +108,7 @@
 			"Audio",
 			"Bullet",
 			"Keyboard",
-			"Boss",
+			"BossCriper",
 			"PlayerHitbox",
 			"Torpedora",
 			"Gamepad",
@@ -131,7 +131,8 @@
 	],
 	"families": {
 		"items": [
-			"Enemies"
+			"Enemies",
+			"Bosses"
 		],
 		"subfolders": []
 	},
@@ -139,7 +140,8 @@
 		"items": [
 			"Test Layout",
 			"Config Layout",
-			"Arena 1"
+			"Arena 1",
+			"Arena 2"
 		],
 		"subfolders": []
 	},

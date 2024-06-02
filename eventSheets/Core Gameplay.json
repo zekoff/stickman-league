@@ -1016,6 +1016,56 @@
 			"sid": 497181826382169
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "Bosses",
+					"sid": 309247027893299
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 895029214343027,
+					"parameters": {
+						"layout": "choose(\"Arena 1\", \"Test Layout\")"
+					}
+				}
+			],
+			"sid": 906316434379810
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "Player",
+					"sid": 243215968738413
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 109354523408087,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 914734391831273,
+					"parameters": {
+						"layout": "choose(\"Arena 1\", \"Test Layout\")"
+					}
+				}
+			],
+			"sid": 669509002002279
+		},
+		{
 			"eventType": "comment",
 			"text": "UI and Music"
 		},

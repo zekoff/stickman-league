@@ -1,0 +1,12 @@
+{
+	"name": "Bosses",
+	"plugin-id": "Sprite",
+	"sid": 686649425918892,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"BossCriper",
+		"BossTorpedora"
+	]
+}

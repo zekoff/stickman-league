@@ -4,7 +4,23 @@
 	"sid": 670461890112671,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Horizontal",
+			"sid": 761903889078424
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Vertical",
+			"sid": 930341860486610
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "AngleSine",
+			"sid": 470412627923002
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

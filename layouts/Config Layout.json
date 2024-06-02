@@ -908,7 +908,7 @@
 					}
 				},
 				{
-					"type": "Boss",
+					"type": "BossCriper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 2",
@@ -2551,7 +2551,7 @@
 					},
 					"uid": 50,
 					"instanceVariables": {
-						"health": 2,
+						"health": 5,
 						"oldX": 0
 					},
 					"behaviors": {
@@ -2575,6 +2575,48 @@
 						"BoundToLayout": {
 							"properties": {
 								"bound-by": "edge"
+							}
+						},
+						"Horizontal": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 100,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Vertical": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 3,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"AngleSine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 30,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						}
 					},
@@ -2684,6 +2726,129 @@
 										"state": [
 											[
 												"bound-by",
+												true
+											]
+										]
+									},
+									{
+										"key": "Horizontal",
+										"state": [
+											[
+												"movement",
+												true
+											],
+											[
+												"wave",
+												true
+											],
+											[
+												"period",
+												true
+											],
+											[
+												"period-random",
+												true
+											],
+											[
+												"period-offset",
+												true
+											],
+											[
+												"period-offset-random",
+												true
+											],
+											[
+												"magnitude",
+												true
+											],
+											[
+												"magnitude-random",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Vertical",
+										"state": [
+											[
+												"movement",
+												true
+											],
+											[
+												"wave",
+												true
+											],
+											[
+												"period",
+												true
+											],
+											[
+												"period-random",
+												true
+											],
+											[
+												"period-offset",
+												true
+											],
+											[
+												"period-offset-random",
+												true
+											],
+											[
+												"magnitude",
+												true
+											],
+											[
+												"magnitude-random",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "AngleSine",
+										"state": [
+											[
+												"movement",
+												true
+											],
+											[
+												"wave",
+												true
+											],
+											[
+												"period",
+												true
+											],
+											[
+												"period-random",
+												true
+											],
+											[
+												"period-offset",
+												true
+											],
+											[
+												"period-offset-random",
+												true
+											],
+											[
+												"magnitude",
+												true
+											],
+											[
+												"magnitude-random",
+												true
+											],
+											[
+												"enabled",
 												true
 											]
 										]
