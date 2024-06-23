@@ -1,8 +1,8 @@
 {
-	"name": "Gun",
+	"name": "Door",
 	"plugin-id": "Sprite",
-	"sid": 552406530628441,
-	"isGlobal": true,
+	"sid": 704614745269897,
+	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
@@ -11,20 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 149,
-						"height": 107,
-						"originX": 0.11409395973154363,
-						"originY": 0.4672897196261682,
+						"width": 142,
+						"height": 240,
+						"originX": 0.7746478873239436,
+						"originY": 0.49583333333333335,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3093622,
+						"imageSpriteId": 1132514,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 904130603870365,
+				"sid": 508419147056040,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

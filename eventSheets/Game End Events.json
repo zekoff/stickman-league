@@ -1,0 +1,108 @@
+{
+	"name": "Game End Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 699787220802616
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerHitbox",
+					"sid": 729744319223548,
+					"behaviorType": "Platform",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Player",
+					"sid": 161229687507398,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Gun",
+					"sid": 708824870212965,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerHitbox",
+					"sid": 127717433914735,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				}
+			],
+			"sid": 667069451165552,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 170122761709826,
+							"parameters": {
+								"instance-variable": "health",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TitleText",
+							"sid": 578489187113810,
+							"parameters": {
+								"text": "\"GAME OVER\""
+							}
+						}
+					],
+					"sid": 580048498551248
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 239284456597953
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TitleText",
+							"sid": 173609021533099,
+							"parameters": {
+								"text": "\"YOU WIN!\" &newline& \"Score: \" & Player.score"
+							}
+						}
+					],
+					"sid": 543105651980217
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 827780202561334
+				}
+			]
+		}
+	],
+	"sid": 358311730310850
+}

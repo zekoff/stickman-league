@@ -1,0 +1,84 @@
+{
+	"name": "Title Screen Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 698444855274716
+				},
+				{
+					"id": "on-any-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 408449138440910,
+					"parameters": {
+						"gamepad": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 828827719303956,
+					"parameters": {
+						"object-to-create": "PlayerHitbox",
+						"layer": "0",
+						"x": "0",
+						"y": "0",
+						"create-hierarchy": false,
+						"template-name": "\"Standard\""
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Player",
+					"sid": 902668158700614,
+					"parameters": {
+						"instance-variable": "currentStage",
+						"value": "1"
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 679321622667571,
+					"parameters": {
+						"layout": "\"Arena \" & Player.currentStage"
+					}
+				}
+			],
+			"sid": 241599090423246,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 240872518407257
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 831505248083278,
+					"disabled": true,
+					"parameters": {
+						"audio-file": "Dededefade",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 984403638230467
+		}
+	],
+	"sid": 374995179978119
+}

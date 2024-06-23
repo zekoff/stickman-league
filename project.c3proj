@@ -115,7 +115,10 @@
 			"StatusDisplay",
 			"EnemySpawner",
 			"BossTorpedora",
-			"Gun"
+			"Gun",
+			"Door",
+			"TitleText",
+			"PlayerSpawn"
 		],
 		"subfolders": []
 	},
@@ -140,14 +143,19 @@
 		"items": [
 			"Test Layout",
 			"Config Layout",
+			"Arena 0",
 			"Arena 1",
-			"Arena 2"
+			"Arena 2",
+			"Title Screen",
+			"GameEnd"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Core Gameplay"
+			"Core Gameplay",
+			"Title Screen Events",
+			"Game End Events"
 		],
 		"subfolders": []
 	},
@@ -174,6 +182,14 @@
 					"name": "badder_song.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 355742375916261,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Dededefade.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 637391627126859,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -326,5 +342,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": "Test Layout"
+	"firstLayout": "Title Screen"
 }

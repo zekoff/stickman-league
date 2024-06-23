@@ -406,21 +406,87 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 622589564180274
+					"sid": 562933110014219
 				}
 			],
 			"actions": [
 				{
+					"id": "set-position",
+					"objectClass": "PlayerHitbox",
+					"sid": 258014542175950,
+					"parameters": {
+						"x": "PlayerSpawn.X",
+						"y": "PlayerSpawn.Y"
+					}
+				},
+				{
 					"id": "set-layer-scale",
 					"objectClass": "System",
-					"sid": 566080553591419,
+					"sid": 917862623896395,
 					"parameters": {
 						"layer": "0",
 						"scale": ".8"
 					}
 				}
 			],
-			"sid": 141228002889398
+			"sid": 722656178369099,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 556608602933190,
+							"parameters": {
+								"value": "Player.Count"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 402529758967940,
+							"parameters": {
+								"object-to-create": "PlayerHitbox",
+								"layer": "\"Layer 0\"",
+								"x": "PlayerSpawn.X",
+								"y": "PlayerSpawn.Y",
+								"create-hierarchy": false,
+								"template-name": "\"Standard\""
+							}
+						}
+					],
+					"sid": 111316816876704
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 487546811134491,
+							"parameters": {
+								"instance-variable": "ammo",
+								"value": "5"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 268203726471988,
+							"parameters": {
+								"instance-variable": "bossTriggered",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 600721467706210
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -613,7 +679,25 @@
 				{
 					"id": "destroy",
 					"objectClass": "Player",
-					"sid": 598308371346333
+					"sid": 598308371346333,
+					"disabled": true
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Player",
+					"sid": 874179011307874,
+					"disabled": true,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 892007355327878,
+					"parameters": {
+						"layout": "GameEnd"
+					}
 				}
 			],
 			"sid": 794464234650653
@@ -1034,7 +1118,8 @@
 					}
 				}
 			],
-			"sid": 906316434379810
+			"sid": 906316434379810,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -1064,6 +1149,80 @@
 				}
 			],
 			"sid": 669509002002279
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerHitbox",
+					"sid": 649579004227890,
+					"parameters": {
+						"object": "Door"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Player",
+					"sid": 749170934513850,
+					"parameters": {
+						"instance-variable": "currentStage",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 724488061166315,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 654102032724256,
+							"parameters": {
+								"instance-variable": "currentStage",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 722291553358105,
+							"parameters": {
+								"layout": "GameEnd"
+							}
+						}
+					],
+					"sid": 839432557010018
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 457567305485722
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 385470797162178,
+							"parameters": {
+								"layout": "\"Arena \" & Player.currentStage"
+							}
+						}
+					],
+					"sid": 743822703530392
+				}
+			]
 		},
 		{
 			"eventType": "comment",
@@ -1166,12 +1325,108 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 482285919855171
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "StatusDisplay",
+					"sid": 196475357638249,
+					"parameters": {
+						"instance-variable": "handle",
+						"comparison": 0,
+						"value": "\"boss\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "StatusDisplay",
+					"sid": 779608256992813,
+					"parameters": {
+						"text": "\"Boss Health: \" & Enemies.health"
+					}
+				}
+			],
+			"sid": 721681728614438,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-random-instance",
+					"objectClass": "System",
+					"sid": 593769373430408,
+					"parameters": {
+						"object": "Bosses"
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 226105678113911,
+					"parameters": {
+						"value": "distance(Player.X, Player.Y, Bosses.X, Bosses.Y) < 1000"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 666267139618485,
+					"parameters": {
+						"instance-variable": "bossTriggered"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 990530352645325
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 189976501172877,
+					"parameters": {
+						"audio-file": "Dededefade",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 166943596004658,
+					"parameters": {
+						"instance-variable": "bossTriggered",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 391767078952520
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
 					"sid": 467685183397188
 				}
 			],
 			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 955499976750205
+				},
 				{
 					"id": "play-by-name",
 					"objectClass": "Audio",
@@ -1550,6 +1805,40 @@
 					"sid": 797410667318981
 				}
 			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Debug",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 622980716485364,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 443496455805127,
+							"parameters": {
+								"layout": "GameEnd"
+							}
+						}
+					],
+					"sid": 243145586414530
+				}
+			],
+			"sid": 239737766017361
 		}
 	],
 	"sid": 375814710823221

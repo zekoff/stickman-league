@@ -1145,7 +1145,9 @@
 						"aimDirection": 0,
 						"ammo": 5,
 						"score": 0,
-						"oldX": 0
+						"oldX": 0,
+						"currentStage": -1,
+						"bossTriggered": false
 					},
 					"behaviors": {
 						"Flash": {
@@ -1218,6 +1220,14 @@
 											},
 											{
 												"iv": "oldX",
+												"state": true
+											},
+											{
+												"iv": "currentStage",
+												"state": true
+											},
+											{
+												"iv": "bossTriggered",
 												"state": true
 											}
 										]

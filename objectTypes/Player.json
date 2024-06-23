@@ -2,7 +2,7 @@
 	"name": "Player",
 	"plugin-id": "Sprite",
 	"sid": 948317334921656,
-	"isGlobal": false,
+	"isGlobal": true,
 	"instanceVariables": [
 		{
 			"name": "health",
@@ -52,6 +52,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 980024526642657
+		},
+		{
+			"name": "currentStage",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 917575723651680
+		},
+		{
+			"name": "bossTriggered",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 322323548419974
 		}
 	],
 	"behaviorTypes": [
